@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.13.35617.110
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BlazorWasmApp1", "BlazorWasmApp1\BlazorWasmApp1.csproj", "{B5303DBC-559D-429C-A9A6-48AECDE99E42}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RSSFeedXMLFileGenerator", "RSSFeedXMLFileGenerator\RSSFeedXMLFileGenerator.csproj", "{F84B400D-D234-F7BB-17AD-5EF356DE9698}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B5303DBC-559D-429C-A9A6-48AECDE99E42}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B5303DBC-559D-429C-A9A6-48AECDE99E42}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B5303DBC-559D-429C-A9A6-48AECDE99E42}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B5303DBC-559D-429C-A9A6-48AECDE99E42}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F84B400D-D234-F7BB-17AD-5EF356DE9698}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F84B400D-D234-F7BB-17AD-5EF356DE9698}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F84B400D-D234-F7BB-17AD-5EF356DE9698}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F84B400D-D234-F7BB-17AD-5EF356DE9698}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {34EA984C-6600-4B1B-AC13-D25D518D1F9D}
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,32 @@
+﻿@using System.ServiceModel.Syndication;
+@using System.Xml
+@inject HttpClient Http
+
+<h1>@_feed?.Title.Text</h1>
+
+<p>@_feed?.Description.Text</p>
+
+<QuickGrid Items="(_feed?.Items ?? []).AsQueryable()">
+    <PropertyColumn Title="Id" Property="@(item => item.Id)" />
+    <PropertyColumn Title="Title" Property="@(item => item.Title.Text)" />
+    <PropertyColumn Title="Content" Property="@(item => item.Summary.Text)" />
+    <TemplateColumn Title="Link" Context="item">
+        @{
+            var url = item.Links.FirstOrDefault()?.Uri;
+        }
+        <a href="@url" target="_blank">@url</a>
+    </TemplateColumn>
+    <PropertyColumn Title="Last Update" Property="@(item => item.LastUpdatedTime)" />
+</QuickGrid>
+
+@code {
+
+    private SyndicationFeed? _feed;
+
+    protected override async Task OnInitializedAsync()
+    {
+        using var feedXmlStream = await Http.GetStreamAsync("./feed.xml");
+        using var reader = XmlReader.Create(feedXmlStream);
+        _feed = SyndicationFeed.Load(reader);
+    }
+}
